@@ -8,7 +8,7 @@
 - [Inline styles](#inline-styles)
   * [Pros](#pros)
   * [Cons](#cons)
-- [Inline styles vs CSS-in-JS](#inline-styles-vs-css-in-js)
+  * [Inline styles vs CSS-in-JS](#inline-styles-vs-css-in-js)
 - [Style tag](#style-tag)
   * [Pros](#pros-1)
   * [Cons](#cons-1)
@@ -102,7 +102,7 @@ Generated HTML:
 <div style="color:#000"></div>
 ```
 
-## Inline styles vs CSS-in-JS
+### Inline styles vs CSS-in-JS
 
 `@mxstbr` differentiate `Inline styles` and `CSS-in-JS`. By `Inline styles` he means React built-in support for style attribute and by `CSS-in-JS` he means a solution which generates CSS and injects it via style tag.
 
