@@ -2,6 +2,55 @@
 
 ![CSS-in-JS 101](css-in-js.png)
 
+<!-- toc -->
+
+- [What is CSS-in-JS?](#what-is-css-in-js)
+- [Inline styles](#inline-styles)
+  * [Pros:](#pros)
+  * [Cons:](#cons)
+- [Inline styles vs CSS-in-JS](#inline-styles-vs-css-in-js)
+- [Style tag](#style-tag)
+  * [Pros:](#pros-1)
+  * [Cons](#cons)
+- [CSS Modules](#css-modules)
+  * [Pros:](#pros-2)
+  * [Cons:](#cons-1)
+- [Global Name Space, Globally Unique Identifier](#global-name-space-globally-unique-identifier)
+- [Dependencies](#dependencies)
+- [Minification](#minification)
+  * [Traditional CSS minification](#traditional-css-minification)
+  * [Minification of class name](#minification-of-class-name)
+  * [Dead Code Elimination](#dead-code-elimination)
+  * [Crytical CSS](#crytical-css)
+  * [Atomic CSS](#atomic-css)
+- [Sharing Constants, variables in CSS](#sharing-constants-variables-in-css)
+  * [Sharing variables inside CSS](#sharing-variables-inside-css)
+  * [Sharing variables in CSS and exposing it to JS](#sharing-variables-in-css-and-exposing-it-to-js)
+  * [Passing variable from JS to CSS](#passing-variable-from-js-to-css)
+- [Non-deterministic Resolution](#non-deterministic-resolution)
+- [Isolation](#isolation)
+- [Theming](#theming)
+  * [Overriding styles](#overriding-styles)
+  * [Overriding theme variables](#overriding-theme-variables)
+- [SSR, Server-Side Rendering](#ssr-server-side-rendering)
+  * [HTML SSR](#html-ssr)
+  * [CSS SSR](#css-ssr)
+- [Zero runtime dependency](#zero-runtime-dependency)
+- [CSS-in-JS implementation specific features](#css-in-js-implementation-specific-features)
+  * [Non-DOM targets](#non-dom-targets)
+  * [CSS as object (object literal)](#css-as-object-object-literal)
+  * [CSS as template literal](#css-as-template-literal)
+  * [Framework agnostic](#framework-agnostic)
+  * [Build step](#build-step)
+  * [Dynamic](#dynamic)
+  * [Generate components based on CSS](#generate-components-based-on-css)
+- [Progressive enhancement, graceful degradation](#progressive-enhancement-graceful-degradation)
+- [Uncovered subjects](#uncovered-subjects)
+  * [Security](#security)
+  * [CSS-in-JS and dynamic load](#css-in-js-and-dynamic-load)
+
+<!-- tocstop -->
+
 ## What is CSS-in-JS?
 
 CSS-in-JS is an umbrella term for technologies which help you define styles in JS in more component-approach-way. The idea was introduced by `@vjeux` in 2014. Initially, it was described as inline styles, but since then battlefield changed a lot. There are about 50 different solutions in this area.

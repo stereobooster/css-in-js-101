@@ -1,0 +1,15 @@
+{
+  "name": "css-in-js-101",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/stereobooster/css-in-js-101.git",
+  "author": "stereobooster <stereobooster@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "markdown-toc": "^1.2.0"
+  },
+  "scripts": {
+    "toc": "yarn run markdown-toc -i --maxdepth 3 README.md"
+  }
+}
