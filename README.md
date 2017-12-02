@@ -6,15 +6,15 @@
 
 - [What is CSS-in-JS?](#what-is-css-in-js)
 - [Inline styles](#inline-styles)
-  * [Pros:](#pros)
-  * [Cons:](#cons)
+  * [Pros](#pros)
+  * [Cons](#cons)
 - [Inline styles vs CSS-in-JS](#inline-styles-vs-css-in-js)
 - [Style tag](#style-tag)
-  * [Pros:](#pros-1)
-  * [Cons](#cons)
+  * [Pros](#pros-1)
+  * [Cons](#cons-1)
 - [CSS Modules](#css-modules)
-  * [Pros:](#pros-2)
-  * [Cons:](#cons-1)
+  * [Pros](#pros-2)
+  * [Cons](#cons-2)
 - [Global Name Space, Globally Unique Identifier](#global-name-space-globally-unique-identifier)
 - [Dependencies](#dependencies)
 - [Minification](#minification)
@@ -55,7 +55,7 @@
 
 CSS-in-JS is an umbrella term for technologies which help you define styles in JS in more component-approach-way. The idea was introduced by `@vjeux` in 2014. Initially, it was described as inline styles, but since then battlefield changed a lot. There are about 50 different solutions in this area.
 
-#### References:
+#### References
 
 - [big list of CSS-in-JS solutions](http://michelebertoli.github.io/css-in-js/)
 - [@vjeux, 2014][@vjeux, 2014]
@@ -64,7 +64,7 @@ CSS-in-JS is an umbrella term for technologies which help you define styles in J
 
 This is built in feature of React. You can pass styles as an object to the component and it will be converted to the string and attached as style attribute to the element.
 
-### Pros:
+### Pros
 
 - No `gloabl namespace`
 - `Full isolation`
@@ -73,7 +73,7 @@ This is built in feature of React. You can pass styles as an object to the compo
 - `Dead code elimination`
 - `Variables, Passing variable from JS to CSS`
 
-### Cons:
+### Cons
 
 - Code duplication in case of SSR.
 - Additional costs in JS payload. Remember that styles which are embedded in JS are not for free. It is not only about download time, it is also about parsing and compiling. See [this detailed explanation by Addy Osmani, why JS is expensive](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e)
@@ -83,7 +83,7 @@ This is built in feature of React. You can pass styles as an object to the compo
 - No web fonts (`@font`)
 - No autoprefixer
 
-#### Example:
+#### Example
 
 **TODO**: verify
 
@@ -113,7 +113,7 @@ So I would suggest to use `CSS-in-JS` as an umbrella term and specify implementa
 - style tag. Also can be referred as "style element" or "real CSS"
 - mixed (like Radium)
 
-#### References:
+#### References
 
 - [@mxstbr, 2016][@mxstbr, 2016]
 
@@ -123,7 +123,7 @@ This approach is alternative to `Inline styles`. Instead of attaching styles as 
 
 Pros and cons can vary from implementation to implementation. But basically, it looks like this:
 
-### Pros:
+### Pros
 
 - (Almost) No `global namespace`
 - (Almost) `Full isolation`
@@ -169,7 +169,8 @@ Generated HTML:
 
 A CSS Module is a CSS file in which all class names and animation names are scoped locally by default. All URLs (url(...)) and @imports are in module request format (./xxx and ../xxx means relative, xxx and xxx/yyy means in modules folder, i. e. in node_modules).
 
-### Pros:
+### Pros
+
 - (Almost) No `global namespace`
 - (Almost) `Full isolation`
 - (Almost) No `non-deterministic resolution`
@@ -184,7 +185,8 @@ A CSS Module is a CSS file in which all class names and animation names are scop
 - Web fonts (`@font`)
 - Autoprefixer
 
-### Cons:
+### Cons
+
 See all points with "(Almost)"
 
 #### References
@@ -196,13 +198,13 @@ See all points with "(Almost)"
 
 All declarations in CSS are global, which is bad because you never know what part of application change in global scope will affect.
 
-#### Possible solutions:
+#### Possible solutions
 
 - Attach styles to each element (`Inline styles`)
 - Use Globally Unique Identifiers for classes (`CSS modules`)
 - Use naming conventions (BEM and others)
 
-#### References:
+#### References
 
 - [@vjeux, 2014][@vjeux, 2014]
 
@@ -210,12 +212,12 @@ All declarations in CSS are global, which is bad because you never know what par
 
 Ability to programmatically resolve dependency between component (JS and HTML) and styles, to decrease error of forgetting to provide appropriate styles, to decrease fear of renaming CSS classes or moving them between files.
 
-#### Possible solutions:
+#### Possible solutions
 
 - bundle styles with-in component (CSS-in-JS)
 - `import styles from "styles.css"` (CSS modules)
 
-#### Related:
+#### Related
 - `Dead Code Elimination`
 
 ## Minification
@@ -232,7 +234,7 @@ In CSS modules and CSS-in-JS you do not use class names directly, instead, you u
 
 Note: This type of minification is not possible for traditional CSS.
 
-#### Example:
+#### Example
 
 ```js
 import styles from "styles.css";
@@ -248,11 +250,11 @@ Because there is no connection between JS/HTML and CSS, you cannot be sure if it
 
 `CSS-in-JS` solves this problem because of a link between JS/HTML and CSS is known, so it is easy to track if this CSS rule required or not.
 
-#### Related:
+#### Related
 - `Dependencies`
 - `Crytical CSS`
 
-##### References:
+##### References
 
 - [@vjeux, 2014][@vjeux, 2014]
 
@@ -288,12 +290,13 @@ const { html, css } = StyleSheetServer.renderStatic(
 )
 ```
 
-#### Related:
+#### Related
+
 - `Dependencies`
 - `Dead Code Elimination`
 - `SSR`
 
-##### References:
+##### References
 
 - [@markdalgleish, 2017][@markdalgleish, 2017]
 
@@ -303,7 +306,7 @@ In CSS modules and CSS-in-JS you do not use class names directly, instead, you u
 
 Note: This type of minification is not possible for traditional CSS.
 
-#### Example:
+#### Example
 
 [styletron](https://github.com/rtsao/styletron)
 
@@ -321,7 +324,7 @@ injectStyle(styletron, {
 // → 'a e'
 ```
 
-##### References:
+##### References
 
 - [@markdalgleish, 2017][@markdalgleish, 2017]
 
@@ -339,7 +342,7 @@ There are different approaches.
 
 This is mainly a feature of `CSS modules` with variables.
 
-#### Example:
+#### Example
 
 [postcss-icss-values](https://github.com/css-modules/postcss-icss-values)
 
@@ -390,7 +393,7 @@ export let button = styling({
 
 Resolution depends on the order of declarations in stylesheets (if declarations have the same specificity).
 
-##### References:
+##### References
 
 - [@vjeux, 2014][@vjeux, 2014]
 
@@ -400,7 +403,7 @@ Because of CSS cascading nature and Global Name Space, there is no way to isolat
 
 Strictly speaking, only inline styles gives full isolation. Every other solution gives just a bit more isolation over pure CSS, because of solving Global Name Space problem.
 
-##### References:
+##### References
 
 - [@vjeux, 2014][@vjeux, 2014]
 
@@ -414,7 +417,7 @@ The idea is to be able to change the look of existing components without the nee
 
 This way you can override styles based on "class names" (keys of objects in case of inline styles).
 
-#### Example:
+#### Example
 
 [react-themeable](https://github.com/markdalgleish/react-themeable)
 
@@ -491,7 +494,7 @@ Almost all `CSS-in-JS` solutions have runtime dependency e.g. library required t
 
 Some solutions do not have this issue, they basically vanished after build step. Examples: `CSS modules`, linaria.
 
-#### Example:
+#### Example
 
 [linaria](https://github.com/callstack/linaria)
 
@@ -559,7 +562,7 @@ Does it depend on React or not?
 
 If build step required or not?
 
-#### Related:
+#### Related
 
 - `SSR`
 - `Progressive enhancement`
@@ -573,7 +576,7 @@ Note: it is not the same as `Variables, Passing variable from JS to CSS`, for ex
 
 Note 2: cannot stop myself from drawing analogy between static and dynamic type systems.
 
-#### Related:
+#### Related
 
 - `Build step`
 - `Variables, Passing variable from JS to CSS`
@@ -582,7 +585,7 @@ Note 2: cannot stop myself from drawing analogy between static and dynamic type 
 
 If your component has pretty simple structure and you care more about how it looks instead of markup (which most likely will be `div` anyway). You can go straight to write CSS and library will generate components for you.
 
-#### Examples:
+#### Examples
 
 [decss](https://github.com/kossnocorp/decss)
 
@@ -621,7 +624,7 @@ The first requirement would be to have some HTML rendered on the server (SSR or 
 - prebuild CSS e.g. `Build step` required
 - rendered CSS e.g. `CSS SSR` required
 
-#### Related:
+#### Related
 
 - `SSR`
 - `Build step`
