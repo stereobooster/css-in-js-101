@@ -583,7 +583,7 @@ The first requirement would be to have some HTML rendered on the server (SSR or 
 
 See [this post](https://reactarmory.com/answers/how-can-i-use-css-in-js-securely)
 
-### CSS-in-JS and dyncmic load
+### CSS-in-JS and dynamic load
 
 Obviously, if it is `Dynamic` it will work, but what about other cases?
 
