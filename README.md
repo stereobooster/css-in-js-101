@@ -61,7 +61,7 @@ CSS-in-JS is an umbrella term for technologies which help you define styles in J
 
 - [@vjeux, 2014][@vjeux, 2014]
 - [Big list of CSS-in-JS solutions](http://michelebertoli.github.io/css-in-js/)
-- [Compoarioson of CSS-in-JS by styled-components](https://github.com/styled-components/comparison/pull/44)
+- [Comparison of CSS-in-JS by styled-components](https://github.com/styled-components/comparison/pull/44)
 - [Yet another comparison](http://seifi.org/css/sxsw-slides-css-in-react-the-good-the-bad-and-the-ugly.html)
 
 ## Inline styles
