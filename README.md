@@ -1,6 +1,6 @@
 # CSS-in-JS 101
 
-![CSS-in-JS 101](css-in-js.png)
+![CSS-in-JS 101](images/css-in-js.png)
 
 <!-- toc -->
 
@@ -44,6 +44,7 @@
   * [Build step](#build-step)
   * [Dynamic](#dynamic)
   * [Generate components based on CSS](#generate-components-based-on-css)
+  * [Developer tools integration](#developer-tools-integration)
 - [Progressive enhancement, graceful degradation](#progressive-enhancement-graceful-degradation)
 - [Uncovered subjects](#uncovered-subjects)
   * [Security](#security)
@@ -614,6 +615,16 @@ const Button = styled.button`
   Panic
 </Button>
 ```
+
+### Developer tools integration
+
+If there are special perks for developer tools?
+
+#### Example
+
+[emotion](https://emotion.sh/) supports source maps for styles authored in javascript
+
+[GIF of source maps in action](images/emotion-source-maps.gif)
 
 ## Progressive enhancement, graceful degradation
 
