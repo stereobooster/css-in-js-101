@@ -15,6 +15,7 @@
 - [CSS Modules](#css-modules)
   * [Pros](#pros-2)
   * [Cons](#cons-2)
+  * [Dead Code Elimination, Crytical CSS](#dead-code-elimination-crytical-css)
 - [Global Name Space, Globally Unique Identifier](#global-name-space-globally-unique-identifier)
 - [Dependencies](#dependencies)
 - [Minification](#minification)
@@ -191,6 +192,16 @@ A CSS Module is a CSS file in which all class names and animation names are scop
 ### Cons
 
 See all points with "(Almost)"
+
+### Dead Code Elimination, Crytical CSS
+
+Strictly speaking, there are no official solutions to those problems in `CSS Modules`, but there is some work in this direction. Correct me if I'm wrong if there is one, why isn't it promoted?
+
+- [Comment by @sokra on critical CSS](https://github.com/webpack-contrib/style-loader/pull/159#issuecomment-286729044)
+- [isomorphic-style-loader](https://github.com/kriasoft/isomorphic-style-loader)
+- [Support Tree shaking of CSS ](https://github.com/webpack-contrib/css-loader/issues/506)
+- [Atomic CSS a la styletron](https://github.com/deamme/styletron-loader)
+- [CSSO scopes](https://github.com/css/csso#scopes)
 
 #### References
 
