@@ -85,7 +85,7 @@ This is built in feature of React. You can pass styles as an object to the compo
 - No CSS animations (`@keyframes`)
 - No pseudo classes (`:hover`)
 - No web fonts (`@font`)
-- No autoprefixer
+- No autoprefixer (well there is [inline-style-prefixer](https://github.com/rofrischmann/inline-style-prefixer))
 
 #### Example
 
