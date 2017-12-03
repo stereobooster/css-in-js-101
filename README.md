@@ -15,14 +15,14 @@
 - [CSS Modules](#css-modules)
   * [Pros](#pros-2)
   * [Cons](#cons-2)
-  * [Dead Code Elimination, Crytical CSS](#dead-code-elimination-crytical-css)
+  * [Dead Code Elimination, Critical CSS](#dead-code-elimination-critical-css)
 - [Global Name Space, Globally Unique Identifier](#global-name-space-globally-unique-identifier)
 - [Dependencies](#dependencies)
 - [Minification](#minification)
   * [Traditional CSS minification](#traditional-css-minification)
   * [Minification of class name](#minification-of-class-name)
   * [Dead Code Elimination](#dead-code-elimination)
-  * [Crytical CSS](#crytical-css)
+  * [Critical CSS](#critical-css)
   * [Atomic CSS](#atomic-css)
 - [Sharing Constants, variables in CSS](#sharing-constants-variables-in-css)
   * [Sharing variables inside CSS](#sharing-variables-inside-css)
@@ -193,7 +193,7 @@ A CSS Module is a CSS file in which all class names and animation names are scop
 
 See all points with "(Almost)"
 
-### Dead Code Elimination, Crytical CSS
+### Dead Code Elimination, Critical CSS
 
 Strictly speaking, there are no official solutions to those problems in `CSS Modules`, but there is some work in this direction. Correct me if I'm wrong if there is one, why isn't it promoted?
 
@@ -266,13 +266,13 @@ Because there is no connection between JS/HTML and CSS, you cannot be sure if it
 
 #### Related
 - `Dependencies`
-- `Crytical CSS`
+- `Critical CSS`
 
 ##### References
 
 - [@vjeux, 2014][@vjeux, 2014]
 
-### Crytical CSS
+### Critical CSS
 
 The ability of a system to extract and inline styles in head required for current page viewed by the user not more nor less.
 
@@ -500,7 +500,7 @@ const { html, css } = StyleSheetServer.renderStatic(
 **TODO**: add example with `Inline Styles`
 
 #### Related
-- `Crytical CSS`
+- `Critical CSS`
 
 ## Zero runtime dependency
 
