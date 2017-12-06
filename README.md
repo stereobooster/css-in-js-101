@@ -659,9 +659,28 @@ The first requirement would be to have some HTML rendered on the server (SSR or 
 
 See [this post](https://reactarmory.com/answers/how-can-i-use-css-in-js-securely)
 
-### CSS-in-JS and dynamic load
+### Async components
 
-Obviously, if it is `Dynamic` it will work, but what about other cases?
+Also known as `code splitting`, `dynamic import`
+
+Async component is a technique (typically implemented as a higher order component) for loading components with `dynamic import`. There are a lot of solutions in this field here are some examples:
+
+- [`loadable-components`](https://github.com/smooth-code/loadable-components)
+- [`react-loadable`](https://github.com/thejameskyle/react-loadable)
+- [`react-async-component`](https://github.com/ctrlplusb/react-async-component)
+- [`react-code-splitting`](https://github.com/didierfranc/react-code-splitting)
+
+#### References
+
+- [Dynamic import](https://github.com/tc39/proposal-dynamic-import) is the TC39 proposal.
+
+> Webpack has a feature to split your codebase into “chunks” which are loaded on demand. Some other bundlers call them “layers”, “rollups”, or “fragments”. This feature is called “code splitting”.
+>
+> — [Code splitting](https://webpack.github.io/docs/code-splitting.html)
+
+### CSS-in-JS and Async components
+
+This works for most `CSS-in-JS` solutions because CSS is bundled inside JS. This is a more complicated task for CSS modules.
 
 ---
 
