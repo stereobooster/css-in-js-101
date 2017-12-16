@@ -23,7 +23,7 @@
   * [Minification of class name](#minification-of-class-name)
   * [Dead Code Elimination](#dead-code-elimination)
   * [Critical CSS](#critical-css)
-  * [Atomic CSS](#atomic-css)
+  * [Automatic Atomic CSS](#automatic-atomic-css)
 - [Sharing Constants, variables in CSS](#sharing-constants-variables-in-css)
   * [Sharing variables inside CSS](#sharing-variables-inside-css)
   * [Sharing variables in CSS and exposing it to JS](#sharing-variables-in-css-and-exposing-it-to-js)
@@ -49,7 +49,9 @@
 - [Progressive enhancement, graceful degradation](#progressive-enhancement-graceful-degradation)
 - [Uncovered subjects](#uncovered-subjects)
   * [Security](#security)
-  * [CSS-in-JS and dynamic load](#css-in-js-and-dynamic-load)
+  * [Async components](#async-components)
+  * [CSS-in-JS and Async components](#css-in-js-and-async-components)
+  * [Atomic CSS](#atomic-css)
 
 <!-- tocstop -->
 
@@ -314,7 +316,7 @@ const { html, css } = StyleSheetServer.renderStatic(
 
 - [@markdalgleish, 2017][@markdalgleish, 2017]
 
-### Atomic CSS
+### Automatic Atomic CSS
 
 In CSS modules and CSS-in-JS you do not use class names directly, instead, you use JS variables, so class names can be easily mangled. The same as in "Minification of class name". But we can go further - generate smaller classes and reuse them to achieve smaller CSS
 
@@ -337,6 +339,10 @@ injectStyle(styletron, {
 });
 // → 'a e'
 ```
+
+#### Related
+
+- [Atomic CSS](#atomic-css)
 
 ##### References
 
@@ -681,6 +687,19 @@ Async component is a technique (typically implemented as a higher order componen
 ### CSS-in-JS and Async components
 
 This works for most `CSS-in-JS` solutions because CSS is bundled inside JS. This is a more complicated task for CSS modules.
+
+### Atomic CSS
+
+Also known as `immutable`, `functional`, `utility-class`.
+
+Idea boils down to use one property per class, so you create required look by composing more than one class. Because each class contains only one property, you do not override those properties and this can be interpreted as immutability.
+
+Do not confuse with [Atomic CSS](https://acss.io/) framework.
+
+#### References
+
+- [Functional CSS - The Good, The Bad, and Some Protips for React.js Users](https://github.com/chibicode/react-functional-css-protips#sunglasses-act-i-what-is-functional-css-and-why-would-i-want-to-use-it-sunglasses)
+- [immutable-css](https://github.com/johnotander/immutable-css)
 
 ---
 
