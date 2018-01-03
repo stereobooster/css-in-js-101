@@ -52,6 +52,7 @@
   * [Async components](#async-components)
   * [CSS-in-JS and Async components](#css-in-js-and-async-components)
   * [Atomic CSS](#atomic-css)
+  * [Animations](#animations)
 
 <!-- tocstop -->
 
@@ -700,6 +701,22 @@ Do not confuse with [Atomic CSS](https://acss.io/) framework.
 
 - [Functional CSS - The Good, The Bad, and Some Protips for React.js Users](https://github.com/chibicode/react-functional-css-protips#sunglasses-act-i-what-is-functional-css-and-why-would-i-want-to-use-it-sunglasses)
 - [immutable-css](https://github.com/johnotander/immutable-css)
+
+### Animations
+
+#### Sequential
+
+Basically CSS3 animations. Pros: can be GPU accelerated.
+
+#### Interruptible
+
+Also known as `interactive`.
+
+Basically JS animations. Pros: can be interrupted.
+
+#### References
+
+- [Building Interruptible and Responsive Interactions](https://developer.apple.com/videos/play/wwdc2014/236/)
 
 ---
 
