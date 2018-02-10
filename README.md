@@ -687,7 +687,7 @@ Async component is a technique (typically implemented as a higher order componen
 
 ### CSS-in-JS and Async components
 
-This works for most `CSS-in-JS` solutions because CSS is bundled inside JS. This is a more complicated task for CSS modules.
+This works for most `CSS-in-JS` solutions because CSS is bundled inside JS. This is a more complicated task for CSS modules. See: [Guide To JavaScript Async Components](https://github.com/stereobooster/guide-to-async-components).
 
 ### Atomic CSS
 
