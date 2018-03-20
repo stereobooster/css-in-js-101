@@ -73,7 +73,7 @@ This is built in feature of React. You can pass styles as an object to the compo
 
 ### Pros
 
-- No `gloabl namespace`
+- No `global namespace`
 - `Full isolation`
 - No `non-deterministic resolution`
 - Clear `dependencies`
